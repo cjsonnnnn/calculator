@@ -19,7 +19,9 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
     cliSources: '.'
-
+- task: SonarQubeAnalyze@7
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 - task: SonarQubePublish@7
   inputs:
     pollingTimeoutSec: '300'
