@@ -19,12 +19,10 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
     cliSources: '.'
-
 - task: NodeTool@0
   inputs:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
-
 - script: |
     npm install
     npm run build
