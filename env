@@ -1,0 +1,21 @@
+# Email
+# Configuration for email settings used to send test results.
+# - SENDER_EMAIL: The email address used to send the email.
+# - SENDER_PASSWORD: An application password, not the actual email account password. For more information on obtaining an application password, visit https://support.google.com/accounts/answer/185833?hl=en.
+# - RECEIVER_EMAIL: The email addresses where the report will be sent.
+# - RECEIVER_NAME: The names of the recipients, matching the order of the receiver emails, e.g., 'George, Jacob, BBUI Company'.
+SENDER_EMAIL = jpiay@fata-organa.com
+SENDER_PASSWORD = @dsh#akhHHLKLKklflk
+RECEIVER_EMAIL = service@fata-organa.com
+RECEIVER_NAME = Jason Caleb
+
+
+# GSheet
+# Configuration for Google Sheet and Google Drive interactions.
+# - GSHEET_TITLE: The title of the Google Sheet document used to retrieve test case values.
+# - REPORT_AS_GSHEETS_FOLDER_ID: The Google Drive folder ID for storing report sheets.
+# - REPORT_AS_RECORDS_FOLDER_ID: The Google Drive folder ID for storing video records.
+# The Google Drive folder ID can be found in the folder's URL, e.g., 'KJD8979JJKjbk' is the ID in 'https://drive.google.com/drive/u/0/folders/KJD8979JJKjbk'.
+GSHEET_TITLE = "HEIII ITS MEE"
+REPORT_AS_GSHEETS_FOLDER_ID = "1tM2Ttdz56kH-CUsU2MWRqSBbwfrlJTiQ"
+REPORT_AS_RECORDS_FOLDER_ID = "sdsqd-fdfdfdfkljsduUIOUDJDSLK"
