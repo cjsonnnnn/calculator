@@ -1,0 +1,34 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+
+pool:
+#  vmImage: ubuntu-latest
+ name: default
+
+steps:
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'jpiay-sqa-sc'
+    scannerMode: 'cli'
+    cliScannerVersion: '7.0.2.4839'
+    configMode: 'manual'
+    cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
+    cliSources: '.'
+- task: SonarQubePublish@7
+  inputs:
+    pollingTimeoutSec: '300'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
