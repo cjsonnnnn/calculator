@@ -24,15 +24,6 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.qualitygate.wait=true
-
-- task: SonarQubePrepare@7
-  inputs:
-    SonarQube: 'jpiay-sqa-sc'
-    scannerMode: 'cli'
-    cliScannerVersion: '7.0.2.4839'
-    configMode: 'manual'
-    cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
-    cliSources: '.'
 - task: NodeTool@0
   inputs:
     versionSpec: '20.x'
@@ -48,3 +39,4 @@ steps:
 - task: SonarQubePublish@7
   inputs:
     pollingTimeoutSec: '300'
+  continueOnError: false
