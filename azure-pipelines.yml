@@ -17,12 +17,14 @@ steps:
     scannerMode: 'cli'
     cliScannerVersion: '7.0.2.4839'
     configMode: 'manual'
+    cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
     cliSources: '.'
     extraProperties: |
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.qualitygate.wait=true
+
 - task: SonarQubePrepare@7
   inputs:
     SonarQube: 'jpiay-sqa-sc'
