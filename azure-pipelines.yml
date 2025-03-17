@@ -19,12 +19,7 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'jpiay-rnd_jpiay-rnd_AZWiOzw7OaR7wm9ypD8m'
     cliSources: '.'
-- task: SonarQubeAnalyze@7
-  inputs:
-    jdkversion: 'JAVA_HOME'
-- task: SonarQubePublish@7
-  inputs:
-    pollingTimeoutSec: '300'
+
 - task: NodeTool@0
   inputs:
     versionSpec: '20.x'
@@ -35,3 +30,9 @@ steps:
     npm run build
     npm test
   displayName: 'npm install, build, and test'
+- task: SonarQubeAnalyze@7
+  inputs:
+    jdkversion: 'JAVA_HOME'
+- task: SonarQubePublish@7
+  inputs:
+    pollingTimeoutSec: '300'
